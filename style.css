@@ -1,3 +1,104 @@
+header {
+  background-image: linear-gradient(
+      rgba(94, 172, 255, 0.392),
+      rgba(94, 172, 255, 0.392)
+    ),
+    url("Assets/images/suit.jpeg");
+  background-size: 100%;
+  height: calc((3264 / 4202) * 100vw);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav a {
+  color: white;
+  margin-right: auto;
+  font-size: x-large;
+}
+
+nav a:hover {
+  border-bottom: rgb(55, 55, 55) solid 3px;
+}
+
+#topSection {
+  padding-top: 15rem;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1.5fr 1.5fr;
+  grid-template-areas: "topTextDiv deviceDiv";
+  color: white;
+}
+
+strong {
+  font-weight: 900;
+  font-size: 6rem;
+}
+
+#topTextDiv {
+  grid-area: topTextDiv;
+  padding: 5vh 5vh 5vh 5vh;
+}
+
+#devicesImage {
+  max-width: 100%;
+  height: auto;
+}
+
+#deviceDiv {
+  grid-area: deviceDiv;
+}
+
+.linkContainer {
+  padding-right: 6%;
+}
+
+.alignright {
+  margin-left: auto;
+  display: flex;
+  width: 40rem;
+}
+
+#atomIcon {
+  padding: 1vh 1vh 1vh 1vh;
+  color: white;
+}
+
 h1 {
-  color: red;
+  font-size: 5rem;
+}
+
+section p {
+  font-size: xx-large;
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+#topSection button {
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 24px;
+  color: white;
+}
+
+details {
+  padding-top: 50rem;
+}
+
+@media only screen and (max-width: 550px) {
+  nav a {
+    margin-right: auto;
+    font-size: x-large;
+  }
+
+  #topSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    grid-template-areas: "topTextDiv" "deviceDiv";
+  }
 }
